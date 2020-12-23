@@ -8,9 +8,11 @@ var ground;
 var stand1, stand2, stand3, stand4, stand5, stand6, stand7;
 var particles = [];
 var plinkos = [];
+var divisions = [];
+var divisionHeight = 300;
 
 function setup() {
-  createCanvas(480,800);
+  createCanvas(480, 800);
 
   engine = Engine.create();
   world = engine.world;
@@ -18,13 +20,13 @@ function setup() {
   ground = new Ground(0, 780, 1200, 10);
 
   stand1 = new Divisions(0, 680, 5, 200);
-  stand2 = new Divisions(80, 680, 10, 200);
-  stand3 = new Divisions(170, 680, 10, 200);
-  stand4 = new Divisions(250, 680, 10, 200);
-  stand5 = new Divisions(330, 680, 10, 200);
-  stand6 = new Divisions(410, 680, 10, 200);
+  stand2 = new Divisions(80, 680, 5, 200);
+  stand3 = new Divisions(160, 680, 5, 200);
+  stand4 = new Divisions(240, 680, 5, 200);
+  stand5 = new Divisions(320, 680, 5, 200);
+  stand6 = new Divisions(400, 680, 5, 200);
   stand7 = new Divisions(475, 680, 5, 200);
-
+  
   for (var j = 50; j <= width; j = j +50) {
     plinkos.push(new Plinko(j, 75, 10));
   }
@@ -53,7 +55,7 @@ function draw() {
    stand5.display();
    stand6.display();
    stand7.display();
-
+   
   for (var i = 0; i < plinkos.length; i++) {
     plinkos[i].display();
   }
