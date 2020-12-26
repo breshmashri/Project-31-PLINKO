@@ -18,4 +18,4 @@ class Plinko{
         circle(0, 0, this.r);
         pop();
    }
-}
+};
