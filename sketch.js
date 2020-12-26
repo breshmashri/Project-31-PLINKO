@@ -5,11 +5,10 @@ const Body = Matter.Body;
 
 var engine, world;
 var ground;
-var stand1, stand2, stand3, stand4, stand5, stand6, stand7;
 var particles = [];
 var plinkos = [];
 var divisions = [];
-var divisionHeight = 250;
+var divisionHeight = 300;
 
 function setup() {
   createCanvas(480, 800);
@@ -55,6 +54,6 @@ function draw() {
   for (var k = 0; k < divisions.length; k++) {
    divisions[k].display();
  }
-   drawSprites()
+   drawSprites();
 }
   
